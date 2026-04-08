@@ -39,12 +39,10 @@ export function Navigation() {
       <div className="bg-primary text-primary-foreground py-2 text-sm hidden md:block">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2">📍 Ostlandstraße 5, 63796 Kahl am Main</span>
-            <span className="flex items-center gap-2">✉️ info@profacilitymanagement.de</span>
+            <span>Ostlandstraße 5, 63796 Kahl am Main</span>
+            <span>info@profacilitymanagement.de</span>
           </div>
-          <div className="flex items-center gap-2">
-            ☎️ <span className="font-semibold">+49 1521 4861221</span>
-          </div>
+          <span className="font-semibold">+49 1521 4861221</span>
         </div>
       </div>
 
@@ -82,7 +80,7 @@ export function Navigation() {
               ))}
             </div>
 
-            {/* Phone CTA */}
+            {/* Phone CTA Desktop */}
             <div className="hidden lg:flex items-center gap-2 text-primary">
               <div>
                 <p className="text-xs text-muted-foreground">Rufen Sie uns an:</p>
@@ -90,41 +88,94 @@ export function Navigation() {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Hamburger Button */}
             <button
-              className="lg:hidden p-2 text-2xl"
+              className="lg:hidden p-2 z-[60] relative"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label="Menü öffnen"
             >
-              {isMobileMenuOpen ? "✕" : "☰"}
-            </button>
-          </div>
-
-          <div
-            className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-              isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
-            <div className="py-4 border-t mt-4">
-              <div className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-foreground hover:text-primary font-medium py-2 transition-colors"
-                    onClick={handleNavClick}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <div className="flex items-center gap-2 text-primary pt-4 border-t">
-                  <span className="font-bold">☎️ +49 1521 4861221</span>
-                </div>
+              <span className="sr-only">Menü</span>
+              <div className="flex flex-col gap-1.5 w-6">
+                <span
+                  className={`block h-0.5 bg-foreground transition-all duration-300 origin-center ${
+                    isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                  }`}
+                />
+                <span
+                  className={`block h-0.5 bg-foreground transition-all duration-300 ${
+                    isMobileMenuOpen ? "opacity-0 scale-x-0" : ""
+                  }`}
+                />
+                <span
+                  className={`block h-0.5 bg-foreground transition-all duration-300 origin-center ${
+                    isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
+                />
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Slide-in Overlay */}
+      <div
+        className={`fixed inset-0 z-[55] lg:hidden transition-all duration-300 ${
+          isMobileMenuOpen ? "visible" : "invisible"
+        }`}
+      >
+        {/* Dark backdrop */}
+        <div
+          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
+            isMobileMenuOpen ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+
+        {/* Slide panel from right */}
+        <div
+          className={`absolute top-0 right-0 h-full w-72 bg-white shadow-2xl transition-transform duration-300 ease-in-out flex flex-col ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Panel Header */}
+          <div className="bg-primary px-6 py-8">
+            <Image
+              src="/logo.png"
+              alt="Pro Facility Management"
+              width={160}
+              height={50}
+              className="h-12 w-auto brightness-0 invert"
+            />
+            <p className="text-primary-foreground/80 text-sm mt-2">Pro Facility Management</p>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="flex flex-col flex-1 px-6 py-8 gap-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={handleNavClick}
+                className="text-foreground hover:text-primary hover:bg-primary/5 font-medium py-3 px-4 rounded-lg transition-colors text-lg"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Contact at bottom */}
+          <div className="px-6 py-6 border-t bg-muted/30">
+            <p className="text-xs text-muted-foreground mb-1">Rufen Sie uns an:</p>
+            <a
+              href="tel:+4915214861221"
+              className="font-bold text-primary text-lg"
+            >
+              +49 1521 4861221
+            </a>
+            <p className="text-xs text-muted-foreground mt-3">Ostlandstraße 5, 63796 Kahl am Main</p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

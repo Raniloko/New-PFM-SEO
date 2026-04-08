@@ -6,28 +6,28 @@ export function ServicesSection() {
       title: "Unterhaltsreinigung",
       description:
         "Zur laufenden Unterhaltsreinigung werden verschiedene Reinigungstätigkeiten in Büroräumen, Schulen, Verwaltungsgebäuden oder Industriebetrieben gezählt, die entsprechend der jeweiligen Anforderungen in fest vereinbarten Intervallen ausgeführt werden.",
-      imageUrl: "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=800",
-      targetId: "gebaeudereinigung",
+      imageUrl: "/images/unterhaltsreinigung.jpg",
+      targetId: "unterhaltsreinigung",
     },
     {
       title: "Glasreinigung",
       description:
         "Die professionelle Reinigung von Fenstern, Glastüren, -fronten und Glasflächen sorgt in gewerblich und öffentlich genutzten Räumlichkeiten für einen glänzenden ersten Eindruck Ihrer Besucher, Kunden und Geschäftspartner.",
-      imageUrl: "https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=800",
+      imageUrl: "/images/glasreinigung.jpg",
       targetId: "glasreinigung",
     },
     {
-      title: "Baureinigung",
+      title: "Bauendreinigung",
       description:
         "Ordnung und Sauberkeit durch eine professionelle Baureinigung sind die wichtigsten Grundlagen für reibungslose Abläufe zur planmäßigen Abwicklung der verschiedenen Bauphasen, insbesondere bei komplexen Projekten und Bauvorhaben.",
-      imageUrl: "https://images.pexels.com/photos/6474206/pexels-photo-6474206.jpeg?auto=compress&cs=tinysrgb&w=800",
-      targetId: "baureinigung",
+      imageUrl: "/images/bauendreinigung.jpg",
+      targetId: "bauendreinigung",
     },
     {
       title: "Tiefgaragenreinigung / Parkhausreinigung",
       description:
         "Die regelmäßige Wartung von Parkhäusern und Tiefgaragen ist unerlässlich, um sie sauber, attraktiv und funktional zu halten. Die von Fahrzeugen abgegebenen Chemikalien und Abgase können Betonbeschichtungen dauerhaft beschädigen.",
-      imageUrl: "https://images.pexels.com/photos/1004409/pexels-photo-1004409.jpeg?auto=compress&cs=tinysrgb&w=800",
+      imageUrl: "/images/tiefgaragenreinigung.jpg",
       targetId: "tiefgaragenreinigung",
     },
   ]
