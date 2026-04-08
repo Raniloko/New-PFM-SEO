@@ -45,18 +45,7 @@ export default function ImpressumPage() {
             <p>Eintragung im Handelsregister B</p>
             <p>Registergericht: Amtsgericht Aschaffenburg</p>
             <p>Registernummer: HRB 18434</p>
-            <p>Gesellschaftsvertrag vom 05.12.2025</p>
             <p>Stammkapital: 1.000,00 EUR</p>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">Unternehmensgegenstand</h2>
-          <div className="text-muted-foreground space-y-2">
-            <p>
-              Gebäudereinigung, Garten- und Landschaftsbau, Hausmeisterservice,
-              genehmigungsfreier Transport sowie Entrümpelung.
-            </p>
           </div>
         </section>
 
