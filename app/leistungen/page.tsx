@@ -19,7 +19,7 @@ const services = [
     description:
       "Zur laufenden Unterhaltsreinigung werden verschiedene Reinigungstätigkeiten in Büroräumen, Schulen, Verwaltungsgebäuden oder Industriebetrieben gezählt, die entsprechend der jeweiligen Anforderungen in fest vereinbarten Intervallen ausgeführt werden.",
     features: ["Büroreinigung", "Schulreinigung", "Verwaltungsgebäude", "Regelmäßige Intervalle"],
-    imageUrl: "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/unterhaltsreinigung.jpg",
   },
   {
     id: "teppichbodenreinigung",
@@ -27,7 +27,7 @@ const services = [
     description:
       "Professionelle Reinigung von Teppichböden und textilen Belägen. Tiefenreinigung, Fleckentfernung und Geruchsneutralisation für hygienisch saubere Räume.",
     features: ["Tiefenreinigung", "Fleckentfernung", "Geruchsneutralisation", "Imprägnierung"],
-    imageUrl: "https://images.pexels.com/photos/4098778/pexels-photo-4098778.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/teppichbodenreinigung.jpg",
   },
   {
     id: "glasreinigung",
@@ -35,7 +35,7 @@ const services = [
     description:
       "Die professionelle Reinigung von Fenstern, Glastüren, -fronten und Glasflächen sorgt in gewerblich und öffentlich genutzten Räumlichkeiten für einen glänzenden ersten Eindruck Ihrer Besucher, Kunden und Geschäftspartner.",
     features: ["Fensterreinigung", "Glasfassaden", "Schaufenster", "Glastüren"],
-    imageUrl: "https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/glasreinigung.jpg",
   },
   {
     id: "industriereinigung",
@@ -43,7 +43,7 @@ const services = [
     description:
       "Spezialisierte Reinigung für Produktions- und Industrieanlagen. Professionelle Reinigung von Maschinen, Hallen und Spezialflächen nach höchsten Sicherheitsstandards.",
     features: ["Maschinenreinigung", "Hallenreinigung", "Spezialreinigung", "Bodenversiegelung"],
-    imageUrl: "https://images.pexels.com/photos/5025517/pexels-photo-5025517.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/industriereinigung.jpg",
   },
   {
     id: "bauendreinigung",
@@ -51,7 +51,7 @@ const services = [
     description:
       "Ordnung und Sauberkeit durch eine professionelle Baureinigung sind die wichtigsten Grundlagen für reibungslose Abläufe zur planmäßigen Abwicklung der verschiedenen Bauphasen, insbesondere bei komplexen Projekten und Bauvorhaben.",
     features: ["Bauendreinigung", "Bauzwischenreinigung", "Feinreinigung", "Grobreinigung"],
-    imageUrl: "https://images.pexels.com/photos/6474206/pexels-photo-6474206.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/bauendreinigung.jpg",
   },
   {
     id: "winterdienst",
@@ -59,7 +59,7 @@ const services = [
     description:
       "Zuverlässiger Winterdienst für sichere Wege und Flächen. Schneeräumung und Streudienst nach Bedarf oder im Abonnement. 24-Stunden Bereitschaft für maximale Sicherheit.",
     features: ["Schneeräumung", "Streudienst", "Eiszapfenentfernung", "24h Bereitschaft"],
-    imageUrl: "https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/winterdienst.jpg",
   },
   {
     id: "tiefgaragenreinigung",
@@ -67,7 +67,7 @@ const services = [
     description:
       "Die regelmäßige Wartung von Parkhäusern und Tiefgaragen ist unerlässlich, um sie sauber, attraktiv und funktional zu halten. Die von Fahrzeugen abgegebenen Chemikalien und Abgase können Betonbeschichtungen dauerhaft beschädigen.",
     features: ["Parkhaus-Reinigung", "Bodenreinigung", "Ölfleck-Entfernung", "Betonschutz"],
-    imageUrl: "https://images.pexels.com/photos/1004409/pexels-photo-1004409.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/tiefgaragenreinigung.jpg",
   },
   {
     id: "hausmeisterservice",
@@ -75,7 +75,7 @@ const services = [
     description:
       "Im gesamten Bereich zum professionellen Hausmeisterdienst gehörender Leistungen stehen die individuellen Anforderungen und Vorstellungen unserer Kunden an erster Stelle. Von Kleinreparaturen über Wartungsarbeiten bis hin zum 24-Stunden-Notdienst.",
     features: ["Handwerkerleistungen", "Kleininstandsetzung", "24h Notdienst", "Wartungsarbeiten"],
-    imageUrl: "https://images.pexels.com/photos/5691589/pexels-photo-5691589.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/hausmeisterservice.jpg",
   },
   {
     id: "entruempelung",
@@ -83,7 +83,7 @@ const services = [
     description:
       "Professionelle Entrümpelung von Wohnungen, Büros und Gewerbeflächen. Fachgerechte Entsorgung inklusive. Wir kümmern uns um die komplette Abwicklung.",
     features: ["Wohnungsentrümpelung", "Büroentrümpelung", "Fachgerechte Entsorgung", "Nachlassräumung"],
-    imageUrl: "https://images.pexels.com/photos/4246196/pexels-photo-4246196.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/entruempelung.jpg",
   },
   {
     id: "garten-gruenflaechenpflege",
@@ -91,7 +91,7 @@ const services = [
     description:
       "Die laufende Pflege und Unterhaltung beinhaltet vielfältige Aufgaben wie z.B. Heckenschnitt, Rasenpflege, Wässern, Laubaufnahme oder das Entfernen von Unrat in den Außenanlagen von Liegenschaften im Siedlungsbereich.",
     features: ["Rasenpflege", "Heckenschnitt", "Bepflanzung", "Laubbeseitigung"],
-    imageUrl: "https://images.pexels.com/photos/1453499/pexels-photo-1453499.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "/images/gartenpflege.jpg",
   },
 ]
 

@@ -1,8 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import Script from "next/script"
 import "./globals.css"
+import { CookieBanner } from "@/components/cookie-banner"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -109,31 +110,11 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href="https://www.profacilitymanagement.de" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Script
-          type="text/javascript"
-          data-cmp-ab="1"
-          src="https://cdn.consentmanager.net/delivery/autoblocking/3f2d99a982d8f.js"
-          data-cmp-host="c.delivery.consentmanager.net"
-          data-cmp-cdn="cdn.consentmanager.net"
-          data-cmp-codesrc="0"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-6P9312CKQR"
-          strategy="afterInteractive"
-          type="text/gtag"
-          data-category="marketing"
-        />
-        <Script id="google-analytics" strategy="afterInteractive" type="text/gtag">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-6P9312CKQR');
-          `}
-        </Script>
       </head>
-      <body className={`${inter.className} font-sans antialiased`}>{children}</body>
+      <body className={`${inter.className} font-sans antialiased`}>
+        <CookieBanner />
+        {children}
+      </body>
     </html>
   )
 }
