@@ -131,26 +131,28 @@ export function Navigation() {
           onClick={() => setIsMobileMenuOpen(false)}
         />
 
-        {/* Slide panel from right */}
+        {/* Slide panel from left */}
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-white shadow-2xl transition-transform duration-300 ease-in-out flex flex-col ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute top-0 left-0 h-full w-72 bg-white shadow-2xl transition-transform duration-300 ease-in-out flex flex-col ${
+            isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          {/* Panel Header */}
-          <div className="bg-primary px-6 py-8">
-            <Image
-              src="/logo.png"
-              alt="Pro Facility Management"
-              width={160}
-              height={50}
-              className="h-12 w-auto brightness-0 invert"
-            />
-            <p className="text-primary-foreground/80 text-sm mt-2">Pro Facility Management</p>
+          {/* Close button */}
+          <div className="flex items-center justify-between px-6 py-5 border-b">
+            <span className="font-semibold text-foreground">Menü</span>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Menü schließen"
+              className="p-1 rounded-md hover:bg-muted transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-col flex-1 px-6 py-8 gap-2">
+          <nav className="flex flex-col flex-1 px-4 py-6 gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -166,10 +168,7 @@ export function Navigation() {
           {/* Contact at bottom */}
           <div className="px-6 py-6 border-t bg-muted/30">
             <p className="text-xs text-muted-foreground mb-1">Rufen Sie uns an:</p>
-            <a
-              href="tel:+4915214861221"
-              className="font-bold text-primary text-lg"
-            >
+            <a href="tel:+4915214861221" className="font-bold text-primary text-lg">
               +49 1521 4861221
             </a>
             <p className="text-xs text-muted-foreground mt-3">Ostlandstraße 5, 63796 Kahl am Main</p>
