@@ -45,7 +45,6 @@ export default function ImpressumPage() {
             <p>Eintragung im Handelsregister B</p>
             <p>Registergericht: Amtsgericht Aschaffenburg</p>
             <p>Registernummer: HRB 18434</p>
-            <p>Stammkapital: 1.000,00 EUR</p>
           </div>
         </section>
 
