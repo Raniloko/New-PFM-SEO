@@ -13,7 +13,7 @@ export default function ImpressumPage() {
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">Angaben gemäß § 5 TMG</h2>
           <div className="text-muted-foreground space-y-2">
-            <p className="font-semibold text-foreground">Pro Facility Management</p>
+            <p className="font-semibold text-foreground">Pro Facility Management UG (haftungsbeschränkt)</p>
             <p>Ostlandstraße 5</p>
             <p>63796 Kahl am Main</p>
           </div>
@@ -42,26 +42,18 @@ export default function ImpressumPage() {
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">Registereintrag</h2>
           <div className="text-muted-foreground space-y-2">
-            <p>Eintragung im Handelsregister</p>
-            <p>Registergericht: Amtsgericht Musterstadt</p>
-            <p>Registernummer: HRB XXXXX</p>
+            <p>Eintragung im Handelsregister B</p>
+            <p>Registergericht: Amtsgericht Aschaffenburg</p>
+            <p>Registernummer: HRB 18434</p>
+            <p>Stammkapital: 1.000,00 EUR</p>
           </div>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">Umsatzsteuer-ID</h2>
           <div className="text-muted-foreground space-y-2">
-            <p>Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:</p>
-            <p>DE XXX XXX XXX</p>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-          <div className="text-muted-foreground space-y-2">
-            <p>Berufsbezeichnung: Facility Management / Gebäudereinigung</p>
-            <p>Zuständige Kammer: Handwerkskammer Musterstadt</p>
-            <p>Verliehen in: Deutschland</p>
+            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:</p>
+            <p>Wird nach Erteilung ergänzt.</p>
           </div>
         </section>
 

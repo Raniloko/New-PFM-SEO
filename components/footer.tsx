@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { CookieSettingsButton } from "@/components/cookie-settings-button"
 
 export function Footer() {
   return (
@@ -104,13 +105,14 @@ export function Footer() {
             <p className="text-white/60 text-sm">
               © {new Date().getFullYear()} Pro Facility Management. Alle Rechte vorbehalten.
             </p>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-6 justify-center md:justify-end">
               <Link href="/impressum" className="text-white/60 hover:text-white text-sm transition-colors">
                 Impressum
               </Link>
               <Link href="/datenschutz" className="text-white/60 hover:text-white text-sm transition-colors">
                 Datenschutz
               </Link>
+              <CookieSettingsButton />
             </div>
           </div>
         </div>
