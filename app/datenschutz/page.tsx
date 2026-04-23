@@ -2,8 +2,12 @@ import type { Metadata } from "next"
 import { LegalLayout } from "@/components/legal-layout"
 
 export const metadata: Metadata = {
-  title: "Datenschutz - Pro Facility Management",
-  description: "Datenschutzerklärung der Pro Facility Management.",
+  title: "Datenschutzerklärung - Pro Facility Management",
+  description:
+    "Datenschutzerklärung der Pro Facility Management UG (haftungsbeschränkt). Informationen zur Verarbeitung Ihrer personenbezogenen Daten gemäß DSGVO.",
+  alternates: {
+    canonical: "https://www.profacilitymanagement.de/datenschutz",
+  },
 }
 
 export default function DatenschutzPage() {

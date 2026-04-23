@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Unsere Leistungen - Pro Facility Management",
   description:
     "Entdecken Sie unser umfassendes Leistungsspektrum: Gebäudereinigung, Hausmeisterdienst, Glasreinigung, Winterdienst, Gartenpflege und mehr.",
+  alternates: {
+    canonical: "https://www.profacilitymanagement.de/leistungen",
+  },
 }
 
 const services = [
@@ -110,11 +113,30 @@ export default function LeistungenPage() {
       {/* Services Grid */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
+          <h2 className="sr-only">Alle Leistungen im Überblick</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} id={service.id}>
                 <ServiceDetailCard {...service} />
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cross-Links: Weitere Leistungen */}
+      <section className="py-12 bg-muted border-t">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-foreground mb-6">Schnellübersicht unserer Leistungen</h2>
+          <div className="flex flex-wrap gap-3">
+            {services.map((service) => (
+              <a
+                key={service.id}
+                href={`#${service.id}`}
+                className="inline-block px-4 py-2 bg-white border border-border rounded-md text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                {service.title}
+              </a>
             ))}
           </div>
         </div>

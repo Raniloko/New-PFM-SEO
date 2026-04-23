@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Kontakt - Pro Facility Management",
   description:
     "Kontaktieren Sie Pro Facility Management für ein unverbindliches Angebot. Wir freuen uns auf Ihre Anfrage.",
+  alternates: {
+    canonical: "https://www.profacilitymanagement.de/kontakt",
+  },
 }
 
 export default function KontaktPage() {

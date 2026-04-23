@@ -3,7 +3,11 @@ import { LegalLayout } from "@/components/legal-layout"
 
 export const metadata: Metadata = {
   title: "Impressum - Pro Facility Management",
-  description: "Impressum und rechtliche Angaben der Pro Facility Management.",
+  description:
+    "Impressum und rechtliche Angaben der Pro Facility Management UG (haftungsbeschränkt), Ostlandstraße 5, 63796 Kahl am Main.",
+  alternates: {
+    canonical: "https://www.profacilitymanagement.de/impressum",
+  },
 }
 
 export default function ImpressumPage() {

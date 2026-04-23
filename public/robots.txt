@@ -5,6 +5,3 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.profacilitymanagement.de/sitemap.xml
 Sitemap: https://www.profacilitymanagement.de/sitemap-images.xml
-
-# Crawl-Delay (optional, falls nötig)
-Crawl-delay: 10

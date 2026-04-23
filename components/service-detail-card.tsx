@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -12,7 +13,16 @@ interface ServiceDetailCardProps {
 export function ServiceDetailCard({ title, description, features, imageUrl }: ServiceDetailCardProps) {
   return (
     <div className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-      <img src={imageUrl || "/placeholder.svg"} alt={title} className="w-full aspect-video object-cover" />
+      <div className="relative aspect-video">
+        <Image
+          src={imageUrl || "/placeholder.svg"}
+          alt={title}
+          fill
+          loading="lazy"
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-card-foreground mb-3">{title}</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">{description}</p>

@@ -25,23 +25,31 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   metadataBase: new URL("https://www.profacilitymanagement.de"),
   alternates: {
-    canonical: "https://www.profacilitymanagement.de",
+    canonical: "/",
   },
   openGraph: {
     title: "Pro Facility Management - Gebäudedienstleistungen",
-    description: "Professionelle Gebäudedienstleistungen und Facility Management Lösungen.",
+    description:
+      "Pro Facility Management bietet professionelle Gebäudedienstleistungen: Gebäudereinigung, Hausmeisterdienste, Winterdienst, Glasreinigung und Grünflächenpflege. Zuverlässig und fair kalkuliert.",
     url: "https://www.profacilitymanagement.de",
     siteName: "Pro Facility Management",
     locale: "de_DE",
     type: "website",
     images: [
       {
-        url: "https://www.profacilitymanagement.de/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "Pro Facility Management Logo",
+        url: "https://www.profacilitymanagement.de/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pro Facility Management - Professionelle Gebäudedienstleistungen in Kahl am Main",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pro Facility Management - Gebäudedienstleistungen",
+    description:
+      "Pro Facility Management bietet professionelle Gebäudedienstleistungen: Gebäudereinigung, Hausmeisterdienste, Winterdienst, Glasreinigung und Grünflächenpflege.",
+    images: ["https://www.profacilitymanagement.de/images/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -76,7 +84,6 @@ const jsonLd = {
   },
   description:
     "Pro Facility Management bietet professionelle Gebäudedienstleistungen: Gebäudereinigung, Hausmeisterdienste, Winterdienst, Glasreinigung und Grünflächenpflege.",
-  priceRange: "$$",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -85,7 +92,9 @@ const jsonLd = {
       closes: "18:00",
     },
   ],
-  sameAs: [],
+  sameAs: [
+    "https://www.google.com/maps/search/Pro+Facility+Management+Kahl+am+Main",
+  ],
   founder: [
     {
       "@type": "Person",
@@ -108,7 +117,6 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <link rel="canonical" href="https://www.profacilitymanagement.de" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={`${inter.className} font-sans antialiased`}>

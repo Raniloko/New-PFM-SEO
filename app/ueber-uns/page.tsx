@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Über Uns - Pro Facility Management",
   description:
     "Erfahren Sie mehr über Pro Facility Management - Ihr zuverlässiger Partner für professionelle Facility Management Lösungen. Geschäftsführer: Cem Bolgi und Ilyas Omar Daib.",
+  alternates: {
+    canonical: "https://www.profacilitymanagement.de/ueber-uns",
+  },
 }
 
 const values = [
