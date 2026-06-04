@@ -17,7 +17,7 @@ export default function HomePage() {
         subtitle="Gebäudereinigung • Hausmeisterservice • Grünflächenpflege"
         ctaText="Unsere Leistungen entdecken"
         ctaHref="#services"
-        backgroundImage="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        backgroundImage="/images/hero-background.jpg"
       />
 
       <section className="py-12 px-4 bg-primary/5">

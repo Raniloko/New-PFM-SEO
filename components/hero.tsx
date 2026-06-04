@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 
@@ -34,12 +35,15 @@ export function Hero({
   return (
     <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('${backgroundImage}')`,
-        }}
-      >
+      <div className="absolute inset-0">
+        <Image
+          src={backgroundImage || "/images/hero-background.jpg"}
+          alt="Pro Facility Management - Professionelle Gebäudedienstleistungen"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 

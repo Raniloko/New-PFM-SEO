@@ -2,8 +2,12 @@ import type { Metadata } from "next"
 import { LegalLayout } from "@/components/legal-layout"
 
 export const metadata: Metadata = {
-  title: "Datenschutz - Pro Facility Management",
-  description: "Datenschutzerklärung der Pro Facility Management.",
+  title: "Datenschutzerklärung - Pro Facility Management",
+  description:
+    "Datenschutzerklärung der Pro Facility Management UG (haftungsbeschränkt). Informationen zur Verarbeitung Ihrer personenbezogenen Daten gemäß DSGVO.",
+  alternates: {
+    canonical: "https://www.profacilitymanagement.de/datenschutz",
+  },
 }
 
 export default function DatenschutzPage() {
@@ -95,7 +99,66 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">4) Kontaktaufnahme</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">4) Google Analytics</h2>
+          <div className="text-muted-foreground space-y-4">
+            <p>
+              Diese Website nutzt Google Analytics 4 (GA4), einen Webanalysedienst der Google Ireland Limited, Gordon
+              House, Barrow Street, Dublin 4, Irland (Muttergesellschaft: Google LLC, 1600 Amphitheatre Parkway,
+              Mountain View, CA 94043, USA).
+            </p>
+            <p>
+              Google Analytics wird ausschließlich nach Ihrer ausdrücklichen Einwilligung geladen und verarbeitet Daten
+              auf Basis von Art. 6 Abs. 1 lit. a DSGVO. Ohne Ihre Einwilligung wird keinerlei Verbindung zu
+              Google-Servern hergestellt.
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>
+                <strong>Zweck:</strong> Analyse des Nutzerverhaltens zur Verbesserung unseres Angebots
+              </li>
+              <li>
+                <strong>Verarbeitete Daten:</strong> IP-Adresse (anonymisiert), Seitenaufrufe, Verweildauer,
+                Browsertyp, Geräteinformationen
+              </li>
+              <li>
+                <strong>IP-Anonymisierung:</strong> Aktiv – Ihre IP-Adresse wird vor der Übermittlung an Google
+                gekürzt
+              </li>
+              <li>
+                <strong>Speicherdauer:</strong> 14 Monate (Google-Standard)
+              </li>
+              <li>
+                <strong>Drittlandübertragung:</strong> Die erhobenen Daten können in die USA übertragen werden. Google
+                ist nach dem EU-US Data Privacy Framework zertifiziert (Art. 45 DSGVO).
+              </li>
+            </ul>
+            <p>
+              <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft über unsere{" "}
+              <button
+                onClick={() =>
+                  typeof window !== "undefined" &&
+                  window.dispatchEvent(new Event("open-cookie-settings"))
+                }
+                className="underline hover:text-foreground transition-colors"
+              >
+                Cookie-Einstellungen
+              </button>{" "}
+              widerrufen. Weitere Informationen finden Sie in der{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground transition-colors"
+              >
+                Datenschutzerklärung von Google
+              </a>
+              .
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-foreground mb-4">5) Kontaktaufnahme</h2>
+
           <div className="text-muted-foreground space-y-4">
             <p>
               Im Rahmen der Kontaktaufnahme mit uns (z.B. per Kontaktformular oder E-Mail) werden – ausschließlich zum
@@ -113,7 +176,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">5) Datenverarbeitung zur Bestellabwicklung</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">6) Datenverarbeitung zur Bestellabwicklung</h2>
           <div className="text-muted-foreground space-y-4">
             <p>
               Soweit für die Vertragsabwicklung zu Liefer- und Zahlungszwecken erforderlich, werden die von uns
@@ -124,10 +187,10 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">6) Rechte des Betroffenen</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">7) Rechte des Betroffenen</h2>
           <div className="text-muted-foreground space-y-4">
             <p>
-              <strong>6.1</strong> Das geltende Datenschutzrecht gewährt Ihnen gegenüber dem Verantwortlichen
+              <strong>7.1</strong> Das geltende Datenschutzrecht gewährt Ihnen gegenüber dem Verantwortlichen
               hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten die nachstehenden Betroffenenrechte
               (Auskunfts- und Interventionsrechte), wobei für die jeweiligen Ausübungsvoraussetzungen auf die angeführte
               Rechtsgrundlage verwiesen wird:
@@ -143,7 +206,42 @@ export default function DatenschutzPage() {
               <li>Recht auf Beschwerde gemäß Art. 77 DSGVO.</li>
             </ul>
             <p>
-              <strong>6.2 WIDERSPRUCHSRECHT</strong>
+              <strong>7.2 Beschwerderecht bei der Aufsichtsbehörde (Art. 77 DSGVO)</strong>
+            </p>
+            <p>
+              Sie haben das Recht, sich jederzeit bei der zuständigen Datenschutz-Aufsichtsbehörde zu beschweren:
+            </p>
+            <div className="bg-muted/40 rounded-lg p-4 text-sm space-y-1">
+              <p className="font-semibold text-foreground">
+                Der Hessische Beauftragte für Datenschutz und Informationsfreiheit (HBDI)
+              </p>
+              <p>Postfach 3163, 65021 Wiesbaden</p>
+              <p>
+                Telefon:{" "}
+                <a href="tel:+496111408-0" className="underline hover:text-foreground">
+                  +49 611 1408-0
+                </a>
+              </p>
+              <p>
+                E-Mail:{" "}
+                <a href="mailto:poststelle@datenschutz.hessen.de" className="underline hover:text-foreground">
+                  poststelle@datenschutz.hessen.de
+                </a>
+              </p>
+              <p>
+                Website:{" "}
+                <a
+                  href="https://datenschutz.hessen.de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-foreground"
+                >
+                  datenschutz.hessen.de
+                </a>
+              </p>
+            </div>
+            <p>
+              <strong>7.3 WIDERSPRUCHSRECHT</strong>
             </p>
             <p className="font-bold uppercase">
               WENN WIR IM RAHMEN EINER INTERESSENABWÄGUNG IHRE PERSONENBEZOGENEN DATEN AUFGRUND UNSERES ÜBERWIEGENDEN
@@ -160,7 +258,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground mb-4">7) Dauer der Speicherung personenbezogener Daten</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">8) Dauer der Speicherung personenbezogener Daten</h2>
           <div className="text-muted-foreground space-y-4">
             <p>
               Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen Rechtsgrundlage,
@@ -194,8 +292,19 @@ export default function DatenschutzPage() {
           </div>
         </section>
 
+        <section>
+          <h2 className="text-2xl font-bold text-foreground mb-4">9) Schriftarten</h2>
+          <div className="text-muted-foreground space-y-2">
+            <p>
+              Diese Website verwendet die Schriftart „Inter", die lokal auf unserem Server gehostet wird. Beim Aufruf
+              dieser Website wird keine Verbindung zu Servern von Google oder anderen externen Anbietern hergestellt.
+              Eine Übermittlung Ihrer personenbezogenen Daten (z.B. IP-Adresse) an Google findet dabei nicht statt.
+            </p>
+          </div>
+        </section>
+
         <section className="pt-4 border-t">
-          <p className="text-muted-foreground text-sm">Stand: Dezember 2024</p>
+          <p className="text-muted-foreground text-sm">Stand: April 2026</p>
         </section>
       </div>
     </LegalLayout>
