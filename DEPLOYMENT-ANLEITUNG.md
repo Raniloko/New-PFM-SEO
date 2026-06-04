@@ -18,14 +18,14 @@ Sie können NICHT einfach die Projektdateien auf Ihren Server hochladen. Next.js
 ### 3. Projekt bauen
 Öffnen Sie ein Terminal/Kommandozeile im entpackten Projektordner und führen Sie folgende Befehle aus:
 
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 (Dieser Befehl installiert alle benötigten Abhängigkeiten - dauert ca. 2-5 Minuten)
 
-```bash
+\`\`\`bash
 npm run build
-```
+\`\`\`
 (Dieser Befehl erstellt die statischen HTML-Dateien im `out` Ordner - dauert ca. 1-2 Minuten)
 
 ### 4. Dateien mit FileZilla hochladen

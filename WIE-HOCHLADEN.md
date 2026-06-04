@@ -20,19 +20,19 @@ Die Website ist bereits richtig konfiguriert und wird beim Build-Prozess automat
    - Mac: Drücken Sie `Cmd + Leertaste`, tippen Sie `terminal` und Enter
    
 3. **Zum Projekt-Ordner navigieren**
-   ```bash
+   \`\`\`bash
    cd Pfad/zum/entpackten/Ordner
-   ```
+   \`\`\`
 
 4. **Pakete installieren** (nur einmal nötig)
-   ```bash
+   \`\`\`bash
    npm install
-   ```
+   \`\`\`
 
 5. **Website bauen** (erstellt statische Dateien)
-   ```bash
+   \`\`\`bash
    npm run build
-   ```
+   \`\`\`
 
 6. **Fertig!** 
    - Es wurde ein Ordner `out` erstellt
@@ -71,7 +71,7 @@ Falls Sie Node.js nicht installieren möchten:
 
 Nach dem Build enthält der `out` Ordner:
 
-```
+\`\`\`
 out/
 ├── index.html              ← Ihre Startseite
 ├── leistungen/
@@ -84,7 +84,7 @@ out/
 │   ├── static/
 │   └── ...
 └── alle anderen Seiten
-```
+\`\`\`
 
 **WICHTIG:** Laden Sie den INHALT des `out` Ordners hoch, nicht den Ordner selbst!
 

@@ -1,21 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "https://profacilitymanagement.de/:path*",
-      "destination": "https://www.profacilitymanagement.de/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://profacilitymanagement.de/:path*",
-      "destination": "https://www.profacilitymanagement.de/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://www.profacilitymanagement.de/:path*",
-      "destination": "https://www.profacilitymanagement.de/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/:path*",
