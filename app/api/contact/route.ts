@@ -68,16 +68,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if recipient email is configured
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || "tidiane.traore@web.de"
-
     // With Resend free plan, "from" must be onboarding@resend.dev unless domain is verified
     const fromEmail = "onboarding@resend.dev"
 
-    // Send email to business
+    // Send email to both recipients
     const businessEmailResult = await resend.emails.send({
       from: fromEmail,
-      to: recipientEmail,
+      to: ["tidiane.traore@web.de", "hanibam00@gmail.com"],
       replyTo: sanitizedData.email,
       subject: `Neue Kontaktanfrage: ${sanitizedData.subject}`,
       html: `
@@ -107,8 +104,6 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     })
-
-    console.log("[v0] Resend business email result:", JSON.stringify(businessEmailResult))
 
     if (businessEmailResult.error) {
       console.error("[v0] Fehler beim Versand der Business-E-Mail:", businessEmailResult.error)
