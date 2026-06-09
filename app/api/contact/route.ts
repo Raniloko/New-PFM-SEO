@@ -69,11 +69,14 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if recipient email is configured
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || "info@profacilitymanagement.de"
+    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || "tidiane.traore@web.de"
+
+    // With Resend free plan, "from" must be onboarding@resend.dev unless domain is verified
+    const fromEmail = "onboarding@resend.dev"
 
     // Send email to business
     const businessEmailResult = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+      from: fromEmail,
       to: recipientEmail,
       replyTo: sanitizedData.email,
       subject: `Neue Kontaktanfrage: ${sanitizedData.subject}`,
@@ -105,6 +108,8 @@ export async function POST(request: NextRequest) {
       `,
     })
 
+    console.log("[v0] Resend business email result:", JSON.stringify(businessEmailResult))
+
     if (businessEmailResult.error) {
       console.error("[v0] Fehler beim Versand der Business-E-Mail:", businessEmailResult.error)
       return NextResponse.json(
@@ -118,7 +123,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to customer
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+      from: fromEmail,
       to: sanitizedData.email,
       subject: "Pro Facility Management - Wir haben Ihre Nachricht erhalten",
       html: `
