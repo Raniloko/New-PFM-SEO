@@ -71,10 +71,11 @@ export async function POST(request: NextRequest) {
     // With Resend free plan, "from" must be onboarding@resend.dev unless domain is verified
     const fromEmail = "onboarding@resend.dev"
 
-    // Send email to both recipients
+    // NOTE: Resend free plan only allows sending to the account owner's email (traoretidiane635@gmail.com)
+    // To send to other recipients, verify a domain at resend.com/domains first.
     const businessEmailResult = await resend.emails.send({
       from: fromEmail,
-      to: ["tidiane.traore@web.de", "hanibam00@gmail.com"],
+      to: ["traoretidiane635@gmail.com"],
       replyTo: sanitizedData.email,
       subject: `Neue Kontaktanfrage: ${sanitizedData.subject}`,
       html: `
@@ -116,10 +117,10 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Send confirmation email to customer
+    // Send confirmation email — only to allowed address on free plan
     await resend.emails.send({
       from: fromEmail,
-      to: sanitizedData.email,
+      to: ["traoretidiane635@gmail.com"],
       subject: "Pro Facility Management - Wir haben Ihre Nachricht erhalten",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
