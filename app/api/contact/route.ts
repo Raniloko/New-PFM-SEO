@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
     // Send to intended recipients via verified domain
     const businessEmailResult = await resend.emails.send({
       from: fromEmail,
-      to: ["tidiane.traore@web.de", "hanibam00@gmail.com"],
+      to: ["info@profacilitymanagement.de", "cem-bolgi@web.de"],
       replyTo: sanitizedData.email,
       subject: `Neue Kontaktanfrage: ${sanitizedData.subject}`,
       html: `
