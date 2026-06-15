@@ -107,11 +107,10 @@ export async function POST(request: NextRequest) {
     })
 
     if (businessEmailResult.error) {
-      console.error("[v0] Fehler beim Versand der Business-E-Mail:", businessEmailResult.error)
+      console.error("Resend error (business mail):", businessEmailResult.error)
       return NextResponse.json(
         {
-          error:
-            "Die E-Mail konnte nicht versendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns per Telefon.",
+          error: "Die E-Mail konnte nicht versendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns per Telefon.",
         },
         { status: 500 }
       )
