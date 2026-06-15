@@ -78,8 +78,12 @@ export function ContactForm() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(formData),
+        signal: AbortSignal.timeout(30000),
       })
 
       const data = await response.json()
@@ -92,10 +96,13 @@ export function ContactForm() {
         setStatus("error")
         setResponseMessage(data.error || "Ein unbekannter Fehler ist aufgetreten.")
       }
-    } catch {
+    } catch (err) {
+      const isOffline = typeof navigator !== "undefined" && !navigator.onLine
       setStatus("error")
       setResponseMessage(
-        "Es ist ein Verbindungsfehler aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung."
+        isOffline
+          ? "Es ist ein Verbindungsfehler aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung."
+          : "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon oder E-Mail."
       )
     }
   }
