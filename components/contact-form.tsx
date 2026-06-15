@@ -92,10 +92,11 @@ export function ContactForm() {
         setStatus("error")
         setResponseMessage(data.error || "Ein unbekannter Fehler ist aufgetreten.")
       }
-    } catch {
+    } catch (err) {
+      console.error("Kontaktformular Fehler:", err)
       setStatus("error")
       setResponseMessage(
-        "Es ist ein Verbindungsfehler aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung."
+        "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon."
       )
     }
   }

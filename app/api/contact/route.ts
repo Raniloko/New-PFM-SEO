@@ -12,8 +12,6 @@ function validateEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: NextRequest) {
   try {
     const body: ContactFormData = await request.json()
@@ -58,7 +56,7 @@ export async function POST(request: NextRequest) {
 
     // Check if RESEND_API_KEY is configured
     if (!process.env.RESEND_API_KEY) {
-      console.error("[v0] RESEND_API_KEY ist nicht gesetzt")
+      console.error("RESEND_API_KEY ist nicht gesetzt")
       return NextResponse.json(
         {
           error:
@@ -67,6 +65,9 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       )
     }
+
+    // Initialize Resend at request time so the env var is always available
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
     // Use verified domain for sending
     const fromEmail = "noreply@profacilitymanagement.de"
