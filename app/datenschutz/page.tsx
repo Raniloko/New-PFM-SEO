@@ -132,17 +132,8 @@ export default function DatenschutzPage() {
               </li>
             </ul>
             <p>
-              <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft über unsere{" "}
-              <button
-                onClick={() =>
-                  typeof window !== "undefined" &&
-                  window.dispatchEvent(new Event("open-cookie-settings"))
-                }
-                className="underline hover:text-foreground transition-colors"
-              >
-                Cookie-Einstellungen
-              </button>{" "}
-              widerrufen. Weitere Informationen finden Sie in der{" "}
+              <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft über die
+              Cookie-Einstellungen (verfügbar im Footer der Website) widerrufen. Weitere Informationen finden Sie in der{" "}
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"

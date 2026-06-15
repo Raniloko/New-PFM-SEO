@@ -68,13 +68,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if recipient email is configured
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || "info@profacilitymanagement.de"
+    // Use verified domain for sending
+    const fromEmail = "noreply@profacilitymanagement.de"
 
-    // Send email to business
+    // Send to intended recipients via verified domain
     const businessEmailResult = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
-      to: recipientEmail,
+      from: fromEmail,
+      to: ["tidiane.traore@web.de", "hanibam00@gmail.com"],
       replyTo: sanitizedData.email,
       subject: `Neue Kontaktanfrage: ${sanitizedData.subject}`,
       html: `
@@ -118,8 +118,8 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to customer
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
-      to: sanitizedData.email,
+      from: fromEmail,
+      to: [sanitizedData.email],
       subject: "Pro Facility Management - Wir haben Ihre Nachricht erhalten",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

@@ -7,15 +7,15 @@ Die korrekte Domain lautet: `profacilitymanagement.de` (mit 'e').
 ## Was wurde bereits implementiert
 
 ### 1. Canonical Tag in layout.tsx
-```tsx
+\`\`\`tsx
 alternates: {
   canonical: "https://www.profacilitymanagement.de",
 }
-```
+\`\`\`
 Zusätzlich im `<head>`:
-```html
+\`\`\`html
 <link rel="canonical" href="https://www.profacilitymanagement.de" />
-```
+\`\`\`
 
 ### 2. 301-Redirect in .htaccess
 Die `.htaccess` leitet jetzt automatisch alle Anfragen von der falsch geschriebenen Domain weiter:
@@ -31,7 +31,7 @@ Das JSON-LD im Code verwendet überall die korrekte URL.
 ## Terminal-Befehle zur Fehlersuche
 
 ### Suche nach Tippfehlern im Projekt:
-```bash
+\`\`\`bash
 # Option 1: Mit grep (Linux/Mac)
 grep -r --exclude-dir={node_modules,.next,.git} -i "managment" .
 
@@ -40,16 +40,16 @@ find . -type f -not -path "*/node_modules/*" -not -path "*/.next/*" -not -path "
 
 # Option 3: Nur in spezifischen Dateitypen suchen
 grep -r --include="*.tsx" --include="*.ts" --include="*.json" --include="*.xml" -i "managment" .
-```
+\`\`\`
 
 ### Das Such-Skript ausführen:
-```bash
+\`\`\`bash
 # Skript ausführbar machen
 chmod +x scripts/search-typos.sh
 
 # Skript ausführen
 ./scripts/search-typos.sh
-```
+\`\`\`
 
 ## Schritte in der Google Search Console
 
@@ -91,14 +91,14 @@ Wenn Sie mehrere Properties in der Search Console haben:
 ## Überprüfung
 
 ### Redirect testen:
-```bash
+\`\`\`bash
 # Mit curl testen (zeigt Header)
 curl -I https://www.profacilitymanagment.de
 
 # Sie sollten sehen:
 # HTTP/1.1 301 Moved Permanently
 # Location: https://www.profacilitymanagement.de/
-```
+\`\`\`
 
 ### Canonical Tag prüfen:
 1. Öffnen Sie: https://www.profacilitymanagement.de

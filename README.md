@@ -21,7 +21,7 @@ Eine professionelle Website für Pro Facility Management - Ihr kompetenter Partn
 
 ### Schnellstart
 
-```bash
+\`\`\`bash
 # 1. Pakete installieren
 npm install
 
@@ -30,7 +30,7 @@ npm run build
 
 # 3. Der 'out' Ordner enthält jetzt alle fertigen Dateien
 # 4. Laden Sie den INHALT vom 'out' Ordner mit FileZilla hoch
-```
+\`\`\`
 
 ### Was wird erstellt?
 
@@ -44,7 +44,7 @@ Nach `npm run build` finden Sie im **`out`** Ordner:
 
 ## Lokale Entwicklung
 
-```bash
+\`\`\`bash
 # Dependencies installieren
 npm install
 
@@ -52,14 +52,14 @@ npm install
 npm run dev
 
 # Öffnen Sie http://localhost:3000
-```
+\`\`\`
 
 ### Build für Produktion
 
-```bash
+\`\`\`bash
 npm run build
 npm start
-```
+\`\`\`
 
 ## 📤 Server-Anforderungen
 
